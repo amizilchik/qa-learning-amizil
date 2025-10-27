@@ -1,1 +1,42 @@
+{
+  "info": {
+    "_postman_id": "d04b1f9a-5c44-4b2a-9c91-8c9a5b2e1e6f",
+    "name": "Demo API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get post #1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/1",
+          "protocol": "https",
+          "host": ["jsonplaceholder","typicode","com"],
+          "path": ["posts","1"]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Response has userId\", function () {",
+              "    var json = pm.response.json();",
+              "    pm.expect(json).to.have.property(\"userId\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
 
