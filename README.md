@@ -9,4 +9,4 @@
 ## Документация продукта
 
 - 📄 [Описание мыши Astrid (PDF)](documentation/astrid_description.pdf)
-
+- 📄 [Описание чата в Telegram (PDF)](documentation/telegram_chat.pdf)
